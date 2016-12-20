@@ -3,10 +3,74 @@
 
 <head>
     <meta charset="UTF-8" />
+    <script src="https://apis.google.com/js/api.js"></script>
+    <!-- <script>
+    function start() {
+        // 2. Initialize the JavaScript client library.
+        gapi.client.init({
+            'apiKey': 'AIzaSyA0mc3zpYLE7tkb7wTCnp5TIhDDZL-Ypzs',
+            'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
+            // clientId and scope are optional if auth is not required.
+            'clientId': '723413737382-rgtis725rvne01mh37nqb3r7skohj3fd.apps.googleusercontent.com',
+            'scope': 'profile',
+        }).then(function() {
+            // 3. Initialize and make the API request.
+            return gapi.client.people.people.get({
+                resourceName: 'people/me'
+            });
+        }).then(function(response) {
+            console.log(response.result);
+        }, function(reason) {
+            console.log('Error: ' + reason.result.error.message);
+        });
+    };
+    // 1. Load the JavaScript client library.
+    gapi.load('client', start);
+    </script> -->
     <title>Carrier Identifier (PH)</title>
-    <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("cd7638381812fc6db6a2f5fe94138d39");</script><!-- end Mixpanel -->
+    <!-- start Mixpanel -->
+    <!-- <script type="text/javascript">
+    (function(e, b) {
+        if (!b.__SV) {
+            var a, f, i, g;
+            window.mixpanel = b;
+            b._i = [];
+            b.init = function(a, e, d) {
+                function f(b, h) {
+                    var a = h.split(".");
+                    2 == a.length && (b = b[a[0]], h = a[1]);
+                    b[h] = function() {
+                        b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+                var c = b;
+                "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+                c.people = c.people || [];
+                c.toString = function(b) {
+                    var a = "mixpanel";
+                    "mixpanel" !== d && (a += "." + d);
+                    b || (a += " (stub)");
+                    return a
+                };
+                c.people.toString = function() {
+                    return c.toString(1) + ".people (stub)"
+                };
+                i = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (g = 0; g < i.length; g++) f(c, i[g]);
+                b._i.push([a, e, d])
+            };
+            b.__SV = 1.2;
+            a = e.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+            f = e.getElementsByTagName("script")[0];
+            f.parentNode.insertBefore(a, f)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init("cd7638381812fc6db6a2f5fe94138d39");
+    </script> -->
+    <!-- end Mixpanel -->
     <!-- build:css combined.min.css -->
     <!-- <link rel="stylesheet" type="text/css" href="css/icon.css"> -->
     <link rel="stylesheet" type="text/css" href="css/roboto.css">
@@ -25,7 +89,6 @@ mixpanel.init("cd7638381812fc6db6a2f5fe94138d39");</script><!-- end Mixpanel -->
         <a href="https://github.com/enzosv">enzosv</a>
     </center>
     <!-- build:js combined.min.js -->
-
     <script src="bower_components/react/react.min.js"></script>
     <script src="bower_components/react/react-dom.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

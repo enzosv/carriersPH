@@ -20,7 +20,7 @@ var MainComponent = React.createClass({
     },
     fetch: function(token) {
         var self = this;
-        mixpanel.identify(token.access_token);
+        // mixpanel.identify(token.access_token);
         $.ajax({
             url: 'https://www.google.com/m8/feeds/contacts/default/full?alt=json&showdeleted=false&max-results=9999',
             dataType: 'jsonp',
@@ -79,7 +79,7 @@ var MainComponent = React.createClass({
                 }
             }
 
-            mixpanel.people.increment("web-logins");
+            // mixpanel.people.increment("web-logins");
             var stats = {
                 "globe": globe,
                 "smart": smart,
@@ -89,10 +89,10 @@ var MainComponent = React.createClass({
                 "all": contacts.length,
                 "unprocessed": people.length
             };
-            mixpanel.people.set(stats);
-            mixpanel.track(
-                "web-login", { "processed": people.length }
-            );
+            // mixpanel.people.set(stats);
+            // mixpanel.track(
+            //     "web-login", { "processed": people.length }
+            // );
             self.setState({
                 "stats": stats,
                 "loggedIn": true,

@@ -21,13 +21,13 @@ var ImportButtonComponent = React.createClass({
             cards += card;
         });
         if (cards !== "") {
-            mixpanel.track(
-                "web-export", {
-                    "contacts_count": this.props.contacts.length,
-                    "export_count": this.props.cards.length
-                }
-            );
-            mixpanel.people.increment("exports", this.props.cards.length);
+            // mixpanel.track(
+            //     "web-export", {
+            //         "contacts_count": this.props.contacts.length,
+            //         "export_count": this.props.cards.length
+            //     }
+            // );
+            // mixpanel.people.increment("exports", this.props.cards.length);
             download(cards, "carriersph.vcard", "text/plain");
             this.props.callback();
         }
